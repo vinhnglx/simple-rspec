@@ -18,7 +18,6 @@ describe Setting do
 	it "has evaluation_enddate greater than or equal to evaluation_startdate" do
 		FactoryGirl.create(:setting, :evaluation_startdate => "2013-05-05", :evaluation_enddate => "2013-07-07").should be_valid
 		FactoryGirl.create(:setting, :evaluation_startdate => "2013-05-05", :evaluation_enddate => "2013-05-05").should be_valid
-
 		FactoryGirl.build(:setting, :evaluation_startdate => "2013-05-05", :evaluation_enddate => "2013-03-03").should_not be_valid
 	end
 
